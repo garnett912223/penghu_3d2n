@@ -3,727 +3,664 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>澎湖 3天2夜 自由行行程表 2026/03/07-09</title>
+  <title>澎湖 3天2夜 自由行行程表（最新版）</title>
   <style>
     :root{
-      --bg:#0b1220;
-      --card:#111a2e;
+      --bg:#050816;
+      --card:#0d1527;
       --muted:#9fb0d0;
       --text:#e9f0ff;
       --accent:#66d9ff;
       --accent2:#9ef7c1;
-      --line: rgba(255,255,255,.12);
-      --chip:#1a2645;
+      --line: rgba(255,255,255,.14);
+      --chip:#151f3b;
       --warn:#ffb366;
     }
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;
-      background: linear-gradient(180deg, #070b14 0%, var(--bg) 50%, #060a12 100%);
-      color: var(--text);
-      line-height: 1.6;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif;
+      background:radial-gradient(circle at top,#101b3a 0,#050816 45%,#020308 100%);
+      color:var(--text);
+      line-height:1.6;
     }
-    a{color: var(--accent); text-decoration:none; transition: color .2s;}
-    a:hover{text-decoration:underline; color: var(--accent2);}
+    a{color:var(--accent);text-decoration:none;transition:color .2s;}
+    a:hover{text-decoration:underline;color:var(--accent2);}
     header{
-      padding: 20px 16px 12px;
-      position: sticky;
-      top: 0;
-      backdrop-filter: blur(12px);
-      background: rgba(7,11,20,.85);
-      border-bottom: 1px solid var(--line);
-      z-index: 100;
-      box-shadow: 0 4px 12px rgba(0,0,0,.3);
+      padding:18px 16px 10px;
+      position:sticky;
+      top:0;
+      backdrop-filter:blur(12px);
+      background:rgba(5,8,22,.9);
+      border-bottom:1px solid var(--line);
+      z-index:100;
+      box-shadow:0 4px 18px rgba(0,0,0,.45);
     }
     h1{
-      font-size: 19px;
-      margin: 0 0 8px 0;
-      letter-spacing: .5px;
-      font-weight: 700;
+      margin:0 0 6px;
+      font-size:19px;
+      font-weight:750;
+      letter-spacing:.5px;
     }
     .sub{
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
+      font-size:13px;
+      color:var(--muted);
     }
-    main{padding: 16px 16px 32px; max-width: 1100px; margin: 0 auto;}
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr;
-      gap: 14px;
-    }
-    @media (min-width: 900px){
-      .grid{grid-template-columns: 1fr 1fr;}
+    main{
+      max-width:1120px;
+      margin:0 auto;
+      padding:16px 16px 32px;
     }
     .card{
-      background: rgba(17,26,46,.95);
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 16px;
-      box-shadow: 0 10px 40px rgba(0,0,0,.35);
+      background:rgba(13,21,39,.96);
+      border-radius:16px;
+      border:1px solid var(--line);
+      padding:16px;
+      box-shadow:0 10px 38px rgba(0,0,0,.4);
+      margin-bottom:14px;
     }
     .card h2{
-      margin:0 0 12px 0;
-      font-size: 17px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      margin:0 0 10px;
+      font-size:17px;
+      display:flex;
+      align-items:center;
+      gap:8px;
     }
     .card h2::before{
-      content: '';
-      display: inline-block;
-      width: 4px;
-      height: 18px;
-      background: var(--accent2);
-      border-radius: 2px;
+      content:'';
+      width:4px;
+      height:18px;
+      border-radius:3px;
+      background:linear-gradient(180deg,var(--accent2),var(--accent));
     }
-    .meta{
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:10px;
+      margin-top:10px;
+    }
+    .info-item{
+      background:rgba(255,255,255,.03);
+      border-radius:10px;
+      border:1px solid var(--line);
+      padding:10px 12px;
+      font-size:13px;
+    }
+    .info-item strong{
+      display:block;
+      font-size:11px;
+      color:var(--accent2);
+      letter-spacing:.5px;
+      text-transform:uppercase;
+      margin-bottom:4px;
+    }
+    .chips{
       display:flex;
       flex-wrap:wrap;
-      gap: 8px;
-      margin-top: 12px;
+      gap:8px;
+      margin-top:10px;
     }
     .chip{
       display:inline-flex;
+      align-items:center;
       gap:6px;
-      align-items:center;
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: var(--chip);
-      border: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 12px;
-      white-space: nowrap;
+      padding:7px 11px;
+      border-radius:999px;
+      background:var(--chip);
+      border:1px solid var(--line);
+      font-size:12px;
+      color:var(--muted);
+      white-space:nowrap;
     }
-    .chip svg{width:14px;height:14px;fill:currentColor;}
-    details{
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      overflow:hidden;
-      background: rgba(255,255,255,.03);
-      transition: all .3s;
-    }
-    details[open]{
-      background: rgba(255,255,255,.06);
-      box-shadow: 0 4px 16px rgba(0,0,0,.2);
-    }
-    details + details{margin-top: 12px;}
-    summary{
-      cursor:pointer;
-      padding: 14px 14px;
-      list-style: none;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap: 12px;
-      font-weight: 600;
-      transition: background .2s;
-    }
-    summary:hover{background: rgba(255,255,255,.05);}
-    summary::-webkit-details-marker {display:none;}
-    .dayTitle{
-      display:flex;
-      flex-direction:column;
-      gap: 3px;
-    }
-    .dayTitle small{
-      font-weight: 500;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    .badge{
-      font-size: 12px;
-      color: #061018;
-      background: var(--accent2);
-      border-radius: 999px;
-      padding: 6px 12px;
-      white-space: nowrap;
-      font-weight: 600;
-    }
-    .badge.warn{
-      background: var(--warn);
-    }
-    table{
-      width:100%;
-      border-collapse: collapse;
-      font-size: 13px;
-      margin-top: 12px;
-    }
-    th, td{
-      border-top: 1px solid var(--line);
-      padding: 12px 10px;
-      vertical-align: top;
-    }
-    th{
-      color: var(--accent2);
-      text-align:left;
-      font-weight: 700;
-      background: rgba(255,255,255,.04);
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-    }
-    .time{
-      width: 85px; 
-      color: var(--accent2); 
-      font-weight: 700;
-      white-space: nowrap;
-    }
-    .place a{
-      font-weight: 650;
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .place a::after{
-      content: '📍';
-      font-size: 14px;
-    }
-    .note{
-      color: var(--muted); 
-      line-height: 1.5;
-      font-size: 12px;
-    }
-    .highlight{
-      background: rgba(102,217,255,.15);
-      border-left: 3px solid var(--accent);
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-    .new-item{
-      background: rgba(158,247,193,.15);
-      border-left: 3px solid var(--accent2);
-    }
-    .actions{
+    .btn-row{
       display:flex;
       flex-wrap:wrap;
       gap:10px;
-      margin-top: 14px;
+      margin-top:12px;
     }
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding: 11px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-size: 13px;
+      gap:8px;
+      padding:10px 13px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      font-size:13px;
+      font-weight:600;
       text-decoration:none;
-      gap: 8px;
-      font-weight: 600;
-      transition: all .2s;
+      transition:all .2s;
     }
     .btn:hover{
-      background: rgba(102,217,255,.2); 
+      background:rgba(102,217,255,.18);
+      border-color:var(--accent);
       text-decoration:none;
-      border-color: var(--accent);
     }
-    footer{
-      color: var(--muted);
-      font-size: 12px;
-      padding: 12px 16px 40px;
-      max-width: 1100px;
-      margin: 0 auto;
-      line-height: 1.7;
-      border-top: 1px solid var(--line);
-      margin-top: 20px;
+    details{
+      border-radius:14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.02);
+      margin-top:10px;
+      overflow:hidden;
     }
-    .kicker{
-      color: var(--accent2); 
-      font-size: 12px; 
-      margin: 0 0 8px 0;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .8px;
+    summary{
+      list-style:none;
+      cursor:pointer;
+      padding:12px 14px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+    }
+    summary::-webkit-details-marker{display:none;}
+    .day-head{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+    .day-head small{
+      color:var(--muted);
+      font-size:12px;
+    }
+    .badge{
+      padding:5px 11px;
+      border-radius:999px;
+      font-size:11px;
+      font-weight:700;
+      background:var(--accent2);
+      color:#021019;
+      white-space:nowrap;
+    }
+    .badge.warn{background:var(--warn);color:#251200;}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+    }
+    th,td{
+      border-top:1px solid var(--line);
+      padding:10px 8px;
+      vertical-align:top;
+    }
+    th{
+      font-size:11px;
+      text-transform:uppercase;
+      color:var(--accent2);
+      background:rgba(255,255,255,.03);
+      letter-spacing:.5px;
+    }
+    .time{
+      width:78px;
+      color:var(--accent2);
+      font-weight:700;
+      white-space:nowrap;
+    }
+    .place a{
+      font-weight:650;
+      display:inline-flex;
+      align-items:center;
+      gap:4px;
+    }
+    .place a::after{
+      content:'📍';
+      font-size:14px;
+    }
+    .note{
+      font-size:12px;
+      color:var(--muted);
+    }
+    .highlight{
+      background:rgba(102,217,255,.12);
+    }
+    .new{
+      background:rgba(158,247,193,.12);
+    }
+    .sectionTitle{
+      margin:10px 0 6px;
+      font-size:14px;
+      color:var(--accent);
+      letter-spacing:.4px;
     }
     .list{
-      margin: 0;
-      padding-left: 20px;
-      color: var(--muted);
-      line-height: 1.7;
+      margin:0;
+      padding-left:18px;
+      font-size:13px;
+      color:var(--muted);
     }
-    .list li{margin-bottom: 6px;}
-    .sectionTitle{
-      margin: 16px 0 10px 0;
-      font-size: 14px;
-      color: var(--accent);
-      letter-spacing: .5px;
-      font-weight: 700;
+    .list li{margin-bottom:4px;}
+    footer{
+      max-width:1120px;
+      margin:0 auto;
+      padding:10px 16px 28px;
+      font-size:12px;
+      color:var(--muted);
+      border-top:1px solid var(--line);
+      margin-top:12px;
     }
-    .info-grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 10px;
-      margin-top: 12px;
-    }
-    .info-item{
-      background: rgba(255,255,255,.04);
-      padding: 10px 12px;
-      border-radius: 10px;
-      border: 1px solid var(--line);
-    }
-    .info-item strong{
-      color: var(--accent2);
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-      display: block;
-      margin-bottom: 4px;
-    }
-    .info-item span{
-      font-size: 13px;
-    }
-    @media (max-width: 600px){
-      h1{font-size: 17px;}
-      table{font-size: 12px;}
-      th, td{padding: 10px 8px;}
-      .btn{font-size: 12px; padding: 9px 12px;}
+    @media (max-width:640px){
+      h1{font-size:18px;}
+      th,td{padding:9px 6px;}
+      table{font-size:12px;}
+      .btn{font-size:12px;padding:9px 11px;}
     }
   </style>
 </head>
 <body>
 <header>
-  <h1>🏝️ 澎湖 3天2夜 自由行行程表</h1>
+  <h1>澎湖 3天2夜 自由行行程表（最新版）</h1>
   <div class="sub">
-    📅 2026/03/07（六）～ 03/09（一）｜👨‍👩‍👧‍👦 5大1小（7歲）｜🚗 本島自駕（7人座）｜🍽️ 晚餐待訂（3/7、3/8）
+    2026/03/07（六）～ 03/09（一）｜5大1小（7歲）｜本島自駕（7人座）｜日展租車
   </div>
 </header>
 
 <main>
-  
-  <section class="card" style="grid-column: 1 / -1;">
-    <h2>📋 基本資訊</h2>
-    
+
+  <!-- 基本資訊 -->
+  <section class="card">
+    <h2>基本資訊與交通</h2>
     <div class="info-grid">
       <div class="info-item">
-        <strong>🏨 住宿</strong>
-        <span><a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97+%E6%96%B0%E5%BA%97%E8%B7%AF197%E8%99%9F" target="_blank" rel="noopener">福朋喜來登酒店</a></span>
+        <strong>住宿</strong>
+        <span>
+          <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97+%E6%96%B0%E5%BA%97%E8%B7%AF197%E8%99%9F" target="_blank" rel="noopener">
+            福朋喜來登酒店（Four Points by Sheraton Penghu）
+          </a>
+        </span>
       </div>
       <div class="info-item">
-        <strong>✈️ 抵達</strong>
-        <span>3/7 上午 07:50 澎湖機場</span>
+        <strong>航班</strong>
+        <span>03/07 抵達澎湖 07:50｜03/09 離開澎湖 13:45</span>
       </div>
       <div class="info-item">
-        <strong>🛫 離開</strong>
-        <span>3/9 下午 13:45 澎湖機場</span>
+        <strong>租車公司</strong>
+        <span>日展租車｜03/07 08:30 取車、03/09 08:30 前還車｜03/09 12:45 日展到飯店接送去機場</span>
       </div>
       <div class="info-item">
-        <strong>🍴 飲食需求</strong>
-        <span>2位蛋奶五辛素，其餘葷食不吃牛</span>
+        <strong>飲食需求</strong>
+        <span>2 位蛋奶五辛素，其餘葷食但不吃牛</span>
       </div>
     </div>
-
-    <div class="actions">
-      <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97+%E6%96%B0%E5%BA%97%E8%B7%AF197%E8%99%9F" target="_blank" rel="noopener">🗺️ 導航到飯店</a>
-      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener">✈️ 導航到機場</a>
-      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%B0%B4%E6%97%8F%E9%A4%A8+%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%99%BD%E6%B2%99%E9%84%89%E5%B2%90%E9%A0%AD%E6%9D%9158%E8%99%9F" target="_blank" rel="noopener">🐠 水族館位置</a>
+    <div class="chips">
+      <span class="chip">不跳島，本島景點為主</span>
+      <span class="chip">Day1：水族館＋北環近景點</span>
+      <span class="chip">Day2：南環海景線</span>
+      <span class="chip">Day3：文康街早餐＋飯店附近閒晃</span>
     </div>
-
-    <p class="kicker" style="margin-top:16px;">⚠️ 行程小提醒</p>
-    <ul class="list">
-      <li>所有 Google Maps 連結點開可直接在手機導航</li>
-      <li>若遇風大或下雨，第 2 天下午可優先跑「澎湖水族館」室內行程</li>
-      <li>3/9 以飯店附近活動為主，不拉遠程，輕鬆收尾</li>
-      <li>🆕 新增：蒙地卡羅咖啡館（第1天下午茶）、鍾家燒餅（第3天早餐）</li>
-    </ul>
+    <div class="btn-row">
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener">✈️ 澎湖機場</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%B1%95%E7%A7%9F%E8%BB%8A%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">🚗 日展租車據點</a>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%B0%B4%E6%97%8F%E9%A4%A8+%E7%99%BD%E6%B2%99%E9%84%89%E5%B2%90%E9%A0%AD%E6%9D%9158%E8%99%9F" target="_blank" rel="noopener">🐠 澎湖水族館</a>
+    </div>
   </section>
 
-  <div class="grid" style="grid-column: 1 / -1;">
-    
-    <section class="card" style="grid-column: 1 / -1;">
-      <h2>📅 每日詳細行程</h2>
-
-      <details open>
-        <summary>
-          <div class="dayTitle">
-            <div>📍 Day 1｜03/07（六）馬公市區＋觀音亭＋蒙地卡羅咖啡館</div>
-            <small>主軸：抵達適應日、老街散步拍照、親子放電、下午茶休息</small>
-          </div>
-          <span class="badge">晚餐待訂</span>
-        </summary>
-
-        <table>
-          <thead>
-            <tr>
-              <th class="time">時間</th>
-              <th>活動</th>
-              <th>地點（點擊導航）</th>
-              <th>備註/美食穿插</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="time">07:50</td>
-              <td>✈️ 抵達、取車</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener">澎湖機場</a>
-              </td>
-              <td class="note">取 7 人座租車（日盛/祥發），裝行李後直接往馬公市區</td>
-            </tr>
-            <tr>
-              <td class="time">08:30</td>
-              <td>🏨 行李寄放/入住</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97+%E6%96%B0%E5%BA%97%E8%B7%AF197%E8%99%9F" target="_blank" rel="noopener">福朋喜來登酒店</a>
-              </td>
-              <td class="note">先把行李放好，之後市區走路更輕鬆；房間好可直接辦理入住</td>
-            </tr>
-            <tr>
-              <td class="time">09:30–11:30</td>
-              <td>🚶 馬公市區老街散步</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E4%B8%AD%E5%A4%AE%E8%80%81%E8%A1%97" target="_blank" rel="noopener">中央老街</a>、
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E5%A4%A9%E5%90%8E%E5%AE%AE" target="_blank" rel="noopener">天后宮</a>、
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E5%9B%9B%E7%9C%BC%E4%BA%95" target="_blank" rel="noopener">四眼井</a>
-              </td>
-              <td class="note">長輩友善：走走停停、喝飲料拍照即可；平地路不累</td>
-            </tr>
-            <tr>
-              <td class="time">11:00–12:00</td>
-              <td>🏘️ 文青聚落逛店</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%AF%A4%E8%A1%8C%E5%8D%81%E6%9D%91" target="_blank" rel="noopener">篤行十村</a>
-              </td>
-              <td class="note">可逛小店、找咖啡、買小禮物（室內比例高，雨天也適合）</td>
-            </tr>
-            <tr class="highlight">
-              <td class="time">12:00–13:30</td>
-              <td>🍽️ <strong>午餐</strong></td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E5%B8%B8%E5%92%8Cbuilding+light+meal+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">常和蔬食</a>
-                或
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%B4%A5%E6%97%BA%E7%B4%A0%E9%A3%9F+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">津旺素食</a>
-              </td>
-              <td class="note">蛋奶素友善；葷食者可加買老街小吃搭配</td>
-            </tr>
-            <tr>
-              <td class="time">14:00–16:00</td>
-              <td>🛝 親子放電＋海邊散步</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E8%A7%80%E9%9F%B3%E4%BA%AD%E6%B5%B7%E6%BF%B1%E5%85%AC%E5%9C%92" target="_blank" rel="noopener">觀音亭海濱公園</a>
-              </td>
-              <td class="note">澎湖最大共融遊戲場，小孩玩遊具、長輩看海休息；風大可縮短停留</td>
-            </tr>
-            <tr class="new-item">
-              <td class="time">16:30–17:30</td>
-              <td>☕ <strong>下午茶/休息</strong> 🆕</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E8%92%99%E5%9C%B0%E5%8D%A1%E7%BE%85%E5%92%96%E5%95%A1%E9%A4%A8+%E6%BE%8E%E6%B9%96%E7%B8%A3%E9%A6%AC%E5%85%AC%E5%B8%82%E6%B0%91%E7%94%9F%E8%B7%AF17-4%E8%99%9F" target="_blank" rel="noopener">蒙地卡羅咖啡館</a>
-              </td>
-              <td class="note"><strong>新增景點</strong>：室內坐一下喝咖啡甜點，補水補糖，晚餐前完美過渡點；長輩也較舒服</td>
-            </tr>
-            <tr class="highlight">
-              <td class="time">18:00–20:00</td>
-              <td>🍽️ <strong>晚餐待訂</strong></td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97+%E9%A4%90%E5%BB%B3" target="_blank" rel="noopener">飯店內餐廳</a>
-              </td>
-              <td class="note">兩位蛋奶素、不吃牛，記得在訂位備註/現場再提醒廚房</td>
-            </tr>
-            <tr>
-              <td class="time">晚上</td>
-              <td>🏊 飯店休息/泳池</td>
-              <td class="place">飯店設施</td>
-              <td class="note">早點休息，養精蓄銳明天跑西嶼</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="kicker" style="margin-top:14px;">☔ 雨天備案</p>
-        <ul class="list">
-          <li>篤行十村文青店＋蒙地卡羅咖啡館室內休息</li>
-          <li>縮短觀音亭公園時間，改去玉冠嫩仙草或其他室內甜點店</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>
-          <div class="dayTitle">
-            <div>📍 Day 2｜03/08（日）西嶼經典＋澎湖水族館</div>
-            <small>主軸：跨海大橋拍照、玄武岩景觀、下午走室內水族館（重點）</small>
-          </div>
-          <span class="badge">晚餐待訂</span>
-        </summary>
-
-        <table>
-          <thead>
-            <tr>
-              <th class="time">時間</th>
-              <th>活動</th>
-              <th>地點（點擊導航）</th>
-              <th>備註/美食穿插</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="time">08:30</td>
-              <td>🚗 出發往白沙/西嶼</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/dir/?api=1&destination=%E6%BE%8E%E6%B9%96%E8%B7%A8%E6%B5%B7%E5%A4%A7%E6%A9%8B" target="_blank" rel="noopener">導航：跨海大橋</a>
-              </td>
-              <td class="note">一路景色開闊，建議車上備水與薄外套（風大）</td>
-            </tr>
-            <tr>
-              <td class="time">09:30–10:30</td>
-              <td>📸 拍照打卡</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E8%B7%A8%E6%B5%B7%E5%A4%A7%E6%A9%8B" target="_blank" rel="noopener">澎湖跨海大橋</a>
-              </td>
-              <td class="note">必拍景點！停留 20–30 分鐘即可，不用太趕</td>
-            </tr>
-            <tr>
-              <td class="time">10:00–10:30</td>
-              <td>🍦 甜點/休息（可選）</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%98%93%E5%AE%B6%E4%BB%99%E4%BA%BA%E6%8E%8C%E5%86%B0+%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%99%BD%E6%B2%99%E9%84%89191-2%E8%99%9F" target="_blank" rel="noopener">易家仙人掌冰</a>
-              </td>
-              <td class="note">跨海大橋旁，內用休息很適合長輩與小孩；仙人掌冰很特別</td>
-            </tr>
-            <tr>
-              <td class="time">10:40–12:00</td>
-              <td>🪨 玄武岩海岸景觀</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%B1%A0%E8%A5%BF%E5%B2%A9%E7%80%91+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">池西岩瀑</a>
-                或
-                <a href="https://www.google.com/maps/search/?api=1&query=%E9%AF%A8%E9%AD%9A%E6%B4%9E+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">鯨魚洞</a>
-              </td>
-              <td class="note">壯觀玄武岩海岸適合拍照；風大時縮短停留；小孩務必牽好，不靠近邊緣</td>
-            </tr>
-            <tr class="highlight">
-              <td class="time">12:30–13:30</td>
-              <td>🍽️ <strong>午餐</strong>（彈性）</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E8%A5%BF%E5%B6%BC+%E7%86%B1%E7%82%92+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">西嶼/白沙 熱炒或簡餐</a>
-              </td>
-              <td class="note">可先電話問能否做蛋奶素 2–3 道（青菜、豆腐、蛋料理）；或回馬公吃素食館</td>
-            </tr>
-            <tr class="new-item">
-              <td class="time">14:00–16:00</td>
-              <td>🐠 <strong>室內重點：水族館</strong></td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%B0%B4%E6%97%8F%E9%A4%A8+%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%99%BD%E6%B2%99%E9%84%89%E5%B2%90%E9%A0%AD%E6%9D%9158%E8%99%9F" target="_blank" rel="noopener">澎湖水族館</a>
-              </td>
-              <td class="note"><strong>建議停留 2 小時</strong>；雨天/大風首選；親子拍照點多（海底隧道、水母區等）；營業時間 09:00–17:00</td>
-            </tr>
-            <tr>
-              <td class="time">16:30–17:30</td>
-              <td>🚗 回馬公/飯店休息</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/dir/?api=1&destination=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97" target="_blank" rel="noopener">導航回飯店</a>
-              </td>
-              <td class="note">若時間還早，可回市區再補玉冠嫩仙草或桂花凍</td>
-            </tr>
-            <tr class="highlight">
-              <td class="time">18:00–20:00</td>
-              <td>🍽️ <strong>晚餐待訂</strong></td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97+%E9%A4%90%E5%BB%B3" target="_blank" rel="noopener">飯店內餐廳</a>
-              </td>
-              <td class="note">用餐後直接休息，隔天不趕路</td>
-            </tr>
-            <tr>
-              <td class="time">晚上</td>
-              <td>🏨 飯店休息</td>
-              <td class="place">-</td>
-              <td class="note">-</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="kicker" style="margin-top:14px;">☔ 雨天備案</p>
-        <ul class="list">
-          <li>縮短戶外景點（跨海大橋快拍即走），直接拉長水族館時間到 2.5–3 小時</li>
-          <li>易家仙人掌冰有室內座位，也可當避雨點</li>
-        </ul>
-      </details>
-
-      <details>
-        <summary>
-          <div class="dayTitle">
-            <div>📍 Day 3｜03/09（一）飯店附近輕鬆收尾＋鍾家燒餅</div>
-            <small>主軸：不拉遠程，睡飽吃早餐、附近走走後回程</small>
-          </div>
-          <span class="badge warn">近飯店</span>
-        </summary>
-
-        <table>
-          <thead>
-            <tr>
-              <th class="time">時間</th>
-              <th>活動</th>
-              <th>地點（點擊導航）</th>
-              <th>備註/美食穿插</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="new-item">
-              <td class="time">08:00–09:30</td>
-              <td>🥖 <strong>早餐</strong> 🆕</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E9%8D%BE%E5%AE%B6%E7%87%92%E9%A4%85+%E6%BE%8E%E6%B9%96%E7%B8%A3%E9%A6%AC%E5%85%AC%E5%B8%82%E6%96%87%E5%BA%B7%E8%A1%9735%E8%99%9F" target="_blank" rel="noopener">鍾家燒餅</a>（文康街35號）＋
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%96%87%E5%BA%B7%E8%A1%97+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">文康街早餐圈</a>
-              </td>
-              <td class="note"><strong>新增小吃</strong>：鍾家燒餅（傳統燒餅、油條）＋二信飯糰；素食者可挑燒餅、油條</td>
-            </tr>
-            <tr>
-              <td class="time">09:30–11:00</td>
-              <td>🚶 飯店周邊散步/拍照</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%94%9F%E6%B4%BB%E5%8D%9A%E7%89%A9%E9%A4%A8" target="_blank" rel="noopener">澎湖生活博物館</a>（可選）
-              </td>
-              <td class="note">若想全程放鬆，也可只待在飯店設施與港邊走走；買伴手禮</td>
-            </tr>
-            <tr>
-              <td class="time">11:00–11:30</td>
-              <td>🧳 回飯店拿行李、退房</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97" target="_blank" rel="noopener">福朋喜來登酒店</a>
-              </td>
-              <td class="note">建議預留充足時間到機場還車（保守抓1.5–2小時前到機場）</td>
-            </tr>
-            <tr>
-              <td class="time">11:45–13:45</td>
-              <td>✈️ 前往機場還車</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/dir/?api=1&destination=%E6%BE%8E%E6%B9%96%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener">導航：澎湖機場</a>
-              </td>
-              <td class="note">辦理登機、候機</td>
-            </tr>
-            <tr class="highlight">
-              <td class="time">13:45</td>
-              <td>🛫 起飛返程</td>
-              <td class="place">
-                <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener">澎湖機場</a>
-              </td>
-              <td class="note">旅途順利！期待下次再訪 🏝️</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p class="kicker" style="margin-top:14px;">☔ 雨天備案</p>
-        <ul class="list">
-          <li>直接飯店內早餐＋飯店港邊散步</li>
-          <li>若前兩天沒去水族館，也可當天早上快閃水族館 1 小時（但要注意還車時間）</li>
-        </ul>
-      </details>
-
-    </section>
-
-  </div>
-
+  <!-- 每日行程 -->
   <section class="card">
-    <h2>🍽️ 小吃甜點特色店清單（可穿插）</h2>
-    
-    <p class="sectionTitle">🏙️ 市區（馬公）</p>
-    <table style="font-size:12px;">
-      <thead>
-        <tr>
-          <th>名稱</th>
-          <th>特色</th>
-          <th>適合時段</th>
-          <th>地圖</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="new-item">
-          <td><strong>🆕 鍾家燒餅</strong></td>
-          <td>傳統燒餅、油條、豆漿</td>
-          <td>第3天早餐</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E9%8D%BE%E5%AE%B6%E7%87%92%E9%A4%85+%E6%BE%8E%E6%B9%96%E7%B8%A3%E9%A6%AC%E5%85%AC%E5%B8%82%E6%96%87%E5%BA%B7%E8%A1%9735%E8%99%9F" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr class="new-item">
-          <td><strong>🆕 蒙地卡羅咖啡館</strong></td>
-          <td>咖啡、輕食、甜點</td>
-          <td>第1天下午茶</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E8%92%99%E5%9C%B0%E5%8D%A1%E7%BE%85%E5%92%96%E5%95%A1%E9%A4%A8+%E6%BE%8E%E6%B9%96%E7%B8%A3%E9%A6%AC%E5%85%AC%E5%B8%82%E6%B0%91%E7%94%9F%E8%B7%AF17-4%E8%99%9F" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr>
-          <td>二信飯糰</td>
-          <td>飯糰、甜不辣</td>
-          <td>早餐</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E4%BF%A1%E9%A3%AF%E7%B3%B0+%E6%96%87%E5%BA%B7%E8%A1%97+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr>
-          <td>玉冠嫩仙草</td>
-          <td>嫩仙草、紅豆冰、豆花</td>
-          <td>下午茶</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E7%8E%89%E5%86%A0%E5%AB%A9%E4%BB%99%E8%8D%89+%E6%B0%91%E7%A6%8F%E8%B7%AF32%E8%99%9F+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr>
-          <td>蔬脆蛋餅</td>
-          <td>葷素蛋餅、米粉湯</td>
-          <td>早午餐</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E8%94%AC%E8%84%86%E8%9B%8B%E9%A4%85+%E5%85%89%E6%98%8E%E8%B7%AF45%E8%99%9F+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr>
-          <td>桂花凍</td>
-          <td>桂花凍、刨冰</td>
-          <td>下午茶</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E6%A1%82%E8%8A%B1%E5%87%8D+%E6%BE%8E%E6%B9%96+%E4%B8%AD%E5%A4%AE%E8%A1%97" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr>
-          <td>篤行十村</td>
-          <td>文青店、拍照、雨備</td>
-          <td>市區散步</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%AF%A4%E8%A1%8C%E5%8D%81%E6%9D%91" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <h2>每日詳細行程</h2>
 
-    <p class="sectionTitle">🌊 白沙/西嶼線</p>
-    <table style="font-size:12px;">
-      <thead>
-        <tr>
-          <th>名稱</th>
-          <th>特色</th>
-          <th>適合時段</th>
-          <th>地圖</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>澎湖跨海大橋</td>
-          <td>必拍地標</td>
-          <td>第2天上午</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E8%B7%A8%E6%B5%B7%E5%A4%A7%E6%A9%8B" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr>
-          <td>易家仙人掌冰</td>
-          <td>仙人掌冰、汁飲</td>
-          <td>第2天途中</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E6%98%93%E5%AE%B6%E4%BB%99%E4%BA%BA%E6%8E%8C%E5%86%B0+%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%99%BD%E6%B2%99%E9%84%89191-2%E8%99%9F" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr>
-          <td>二崁聚落</td>
-          <td>古厝巷弄拍照</td>
-          <td>第2天下午（可選）</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E5%B4%81%E8%81%9A%E8%90%BD+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-        <tr class="highlight">
-          <td><strong>澎湖水族館</strong></td>
-          <td>海底隧道、親子必訪</td>
-          <td>第2天下午（室內重點）</td>
-          <td><a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%B0%B4%E6%97%8F%E9%A4%A8+%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%99%BD%E6%B2%99%E9%84%89%E5%B2%90%E9%A0%AD%E6%9D%9158%E8%99%9F" target="_blank" rel="noopener">導航</a></td>
-        </tr>
-      </tbody>
-    </table>
+    <!-- Day 1 -->
+    <details open>
+      <summary>
+        <div class="day-head">
+          <div>Day 1｜03/07（六）飯店附近悠閒 → 下午水族館＋北環近景點 → 回馬公</div>
+          <small>主軸：適應＋不趕路；下午親子室內＋少量北環景點；晚上視體力去蒙地卡羅咖啡館</small>
+        </div>
+        <span class="badge">晚餐：視情況選飯店或市區</span>
+      </summary>
+      <table>
+        <thead>
+          <tr>
+            <th class="time">時間</th>
+            <th>活動</th>
+            <th>地點</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time">07:50</td>
+            <td>抵達澎湖、領行李</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener">澎湖機場</a>
+            </td>
+            <td class="note">出關後依日展租車指示前往取車點。</td>
+          </tr>
+          <tr>
+            <td class="time">08:30</td>
+            <td>取車</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%B1%95%E7%A7%9F%E8%BB%8A%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">日展租車（澎湖）</a>
+            </td>
+            <td class="note">7 人座車，確認兒童安全座椅、車況、油量。</td>
+          </tr>
+          <tr>
+            <td class="time">08:45–09:00</td>
+            <td>前往飯店、Check-in 或寄放行李</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97+%E6%96%B0%E5%BA%97%E8%B7%AF197%E8%99%9F" target="_blank" rel="noopener">福朋喜來登酒店</a>
+            </td>
+            <td class="note">若房間已好可先入住；否則寄放行李即可。</td>
+          </tr>
+          <tr>
+            <td class="time">09:00–11:30</td>
+            <td>飯店附近閒晃＋找中餐</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E9%A6%AC%E5%85%AC%E5%B8%82%E5%B8%82%E5%8D%80" target="_blank" rel="noopener">馬公市區</a>
+            </td>
+            <td class="note">
+              可在飯店周邊港邊散步、逛便利商店，順路物色午餐餐廳（含素食）。也可直接先吃早午餐。
+            </td>
+          </tr>
+          <tr class="highlight">
+            <td class="time">11:00–12:00</td>
+            <td>早午餐／午餐（馬公市區）</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E5%B8%B8%E5%92%8Cbuilding%20light%20meal%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">常和蔬食</a> 或
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%B4%A5%E6%97%BA%E7%B4%A0%E9%A3%9F%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">津旺素食</a>
+            </td>
+            <td class="note">
+              建議選蔬食館，蛋奶素兩位主食有保障，葷食者也能接受；吃飽直接開車往水族館。
+            </td>
+          </tr>
+          <tr>
+            <td class="time">12:00–12:30</td>
+            <td>開車前往水族館</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%B0%B4%E6%97%8F%E9%A4%A8+%E7%99%BD%E6%B2%99%E9%84%89%E5%B2%90%E9%A0%AD%E6%9D%9158%E8%99%9F" target="_blank" rel="noopener">澎湖水族館</a>
+            </td>
+            <td class="note">馬公到白沙岐頭約 25–30 分鐘車程。</td>
+          </tr>
+          <tr class="highlight">
+            <td class="time">12:30–14:30</td>
+            <td>澎湖水族館</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%B0%B4%E6%97%8F%E9%A4%A8+%E6%BE%8E%E6%B9%96%E7%B8%A3%E7%99%BD%E6%B2%99%E9%84%89%E5%B2%90%E9%A0%AD%E6%9D%9158%E8%99%9F" target="_blank" rel="noopener">澎湖水族館</a>
+            </td>
+            <td class="note">
+              營業 09:00–17:00，地址白沙鄉岐頭村 58 號。可看大洋池餵食秀、海底隧道、觸摸池等，親子＋長輩都友善。
+            </td>
+          </tr>
+          <tr>
+            <td class="time">14:30–15:00</td>
+            <td>前往北環近景點 1：跨海大橋</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E8%B7%A8%E6%B5%B7%E5%A4%A7%E6%A9%8B" target="_blank" rel="noopener">澎湖跨海大橋</a>
+            </td>
+            <td class="note">水族館 → 跨海大橋約 10–15 分鐘車程。</td>
+          </tr>
+          <tr>
+            <td class="time">15:00–15:30</td>
+            <td>拍照停留</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E8%B7%A8%E6%B5%B7%E5%A4%A7%E6%A9%8B" target="_blank" rel="noopener">跨海大橋</a>
+            </td>
+            <td class="note">經典打卡點，停留 20–30 分鐘即可。</td>
+          </tr>
+          <tr>
+            <td class="time">15:30–16:00</td>
+            <td>北環近景點 2（可選）</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E4%B8%AD%E5%B1%AF%E9%A2%A8%E8%BB%8A+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">中屯風車</a>
+               或
+              <a href="https://www.google.com/maps/search/?api=1&query=%E5%BE%8C%E5%AF%AE%E5%A4%A9%E5%A0%82%E8%B7%AF+%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">後寮天堂路</a>
+            </td>
+            <td class="note">視天氣與體力二擇一即可，不用硬湊滿。</td>
+          </tr>
+          <tr>
+            <td class="time">16:00–16:40</td>
+            <td>回馬公／飯店</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97" target="_blank" rel="noopener">導航回飯店</a>
+            </td>
+            <td class="note">回程讓小孩、小睡片刻也可以。</td>
+          </tr>
+          <tr>
+            <td class="time">16:40–18:00</td>
+            <td>飯店休息</td>
+            <td class="place">福朋喜來登</td>
+            <td class="note">使用飯店設施、整理照片、洗澡等。</td>
+          </tr>
+          <tr>
+            <td class="time">18:00–20:00</td>
+            <td>晚餐</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=Four%20Points%20by%20Sheraton%20Penghu%20Restaurant" target="_blank" rel="noopener">飯店餐廳或市區餐廳</a>
+            </td>
+            <td class="note">若在飯店用餐，提前註明 2 位蛋奶素、其餘不吃牛。</td>
+          </tr>
+          <tr class="new">
+            <td class="time">20:00 之後</td>
+            <td>蒙地卡羅咖啡館（視體力可選）</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E8%92%99%E5%9C%B0%E5%8D%A1%E7%BE%85%E5%92%96%E5%95%A1%E9%A4%A8+%E6%BE%8E%E6%B9%96%E7%B8%A3%E9%A6%AC%E5%85%AC%E5%B8%82%E6%B0%91%E7%94%9F%E8%B7%AF17-4%E8%99%9F" target="_blank" rel="noopener">蒙地卡羅咖啡館</a>
+            </td>
+            <td class="note">若大家不太累，可以散步或開車過去喝飲料、吃甜點。</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <!-- Day 2 -->
+    <details>
+      <summary>
+        <div class="day-head">
+          <div>Day 2｜03/08（日）南環海景線（奎壁山＋南寮＋山水沙灘＋風櫃洞）</div>
+          <small>主軸：海景＋沙灘＋步道；視當日潮汐安排奎壁山時段</small>
+        </div>
+        <span class="badge">長距離移動日</span>
+      </summary>
+      <table>
+        <thead>
+          <tr>
+            <th class="time">時間</th>
+            <th>活動</th>
+            <th>地點</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time">08:30</td>
+            <td>出發往湖西方向</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=%E5%A5%8E%E5%A3%81%E5%B1%B1%E6%91%A9%E8%A5%BF%E5%88%86%E6%B5%B7" target="_blank" rel="noopener">奎壁山摩西分海方向</a>
+            </td>
+            <td class="note">行前查當天潮汐時間，若退潮在下午，可與山水/風櫃對調順序。</td>
+          </tr>
+          <tr class="highlight">
+            <td class="time">09:00–10:30</td>
+            <td>奎壁山摩西分海</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E5%A5%8E%E5%A3%81%E5%B1%B1%E6%91%A9%E8%A5%BF%E5%88%86%E6%B5%B7" target="_blank" rel="noopener">奎壁山地質公園</a>
+            </td>
+            <td class="note">
+              退潮時可走向「摩西分海」沙洲；風大時注意長輩與小孩安全，不要靠近邊緣。
+            </td>
+          </tr>
+          <tr>
+            <td class="time">10:50–11:30</td>
+            <td>南寮古厝／浮球秘境</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E5%8D%97%E5%AF%AE%E5%8F%A4%E5%8E%9D%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">南寮古厝</a>
+            </td>
+            <td class="note">漁村巷弄、彩色浮球、裝置藝術，適合拍照、走走。</td>
+          </tr>
+          <tr class="highlight">
+            <td class="time">12:00–13:00</td>
+            <td>午餐（建議回馬公吃）</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%B4%A5%E6%97%BA%E7%B4%A0%E9%A3%9F%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">津旺素食</a>、
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%B0%B8%E9%81%94%E7%B4%A0%E9%A3%9F%E9%A4%A8%20%E9%A6%AC%E5%85%AC" target="_blank" rel="noopener">永達素食館</a> 等
+            </td>
+            <td class="note">
+              南環沿線素食選擇較不穩，建議直接拉回馬公吃蔬食館，全團一起吃素一餐最簡單。
+            </td>
+          </tr>
+          <tr>
+            <td class="time">13:30–14:30</td>
+            <td>山水沙灘</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E5%B1%B1%E6%B0%B4%E6%B2%99%E6%BC%A0%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">山水沙灘</a>
+            </td>
+            <td class="note">小孩玩沙、大人散步拍照，帶毛巾、替換衣物較方便。</td>
+          </tr>
+          <tr>
+            <td class="time">14:40–15:30</td>
+            <td>風櫃洞</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E9%A2%A8%E6%AB%83%E6%B4%9E%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">風櫃洞</a>
+            </td>
+            <td class="note">海蝕洞＋浪拍岩壁的聲音很特別；風強時一定要牽好小孩，不要站太靠前。</td>
+          </tr>
+          <tr>
+            <td class="time">15:30–16:10</td>
+            <td>回馬公／飯店</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97" target="_blank" rel="noopener">導航回飯店</a>
+            </td>
+            <td class="note">若時間仍早，可在市區繞一圈買伴手禮。</td>
+          </tr>
+          <tr>
+            <td class="time">16:10–18:00</td>
+            <td>飯店休息</td>
+            <td class="place">福朋喜來登</td>
+            <td class="note">洗澡、午睡、整理照片。</td>
+          </tr>
+          <tr>
+            <td class="time">18:00–20:00</td>
+            <td>晚餐</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=Four%20Points%20by%20Sheraton%20Penghu%20Restaurant" target="_blank" rel="noopener">飯店餐廳或市區餐廳</a>
+            </td>
+            <td class="note">建議事先訂位並說明葷素需求。</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
+    <!-- Day 3 -->
+    <details>
+      <summary>
+        <div class="day-head">
+          <div>Day 3｜03/09（一）8:30 前還車 → 文康街早餐 → 飯店附近閒晃 → 接送機場</div>
+          <small>主軸：不拉車程、吃完早餐＋輕鬆散步，12:45 日展到飯店接送去機場</small>
+        </div>
+        <span class="badge warn">早還車＋接駁日</span>
+      </summary>
+      <table>
+        <thead>
+          <tr>
+            <th class="time">時間</th>
+            <th>活動</th>
+            <th>地點</th>
+            <th>備註</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="time">～08:00</td>
+            <td>從飯店出發去還車</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%B1%95%E7%A7%9F%E8%BB%8A%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">日展租車</a>
+            </td>
+            <td class="note">依日展門市位置（機場／市區）調整出門時間。</td>
+          </tr>
+          <tr>
+            <td class="time">≦08:30</td>
+            <td>完成還車</td>
+            <td class="place">日展租車據點</td>
+            <td class="note">你指定 8:30 前還車，完成後可步行或叫計程車前往文康街。</td>
+          </tr>
+          <tr class="highlight">
+            <td class="time">08:30–09:30</td>
+            <td>文康街早餐</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%96%87%E5%BA%B7%E8%A1%97%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">文康街早餐圈</a>
+            </td>
+            <td class="note">
+              可吃：
+              <a href="https://www.google.com/maps/search/?api=1&query=%E9%90%98%E8%A8%98%E7%87%92%E9%A4%85%20%E6%96%87%E5%BA%B7%E8%A1%97" target="_blank" rel="noopener">鐘記燒餅</a>、
+              <a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E4%BF%A1%E9%A3%AF%E7%B3%B0%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">二信飯糰</a> 等；素食者可選素燒餅、素飯糰，不吃牛就略過牛雜湯。
+            </td>
+          </tr>
+          <tr>
+            <td class="time">09:30–11:00</td>
+            <td>飯店附近閒晃／買伴手禮</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%94%9F%E6%B4%BB%E5%8D%9A%E7%89%A9%E9%A4%A8" target="_blank" rel="noopener">澎湖生活博物館</a>（可選）或飯店港邊
+            </td>
+            <td class="note">不拉遠程，散步、拍照、採買伴手禮即可。</td>
+          </tr>
+          <tr>
+            <td class="time">11:00–11:15</td>
+            <td>回飯店拿行李、退房</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%A6%8F%E6%9C%8B%E5%96%9C%E4%BE%86%E7%99%BB%E9%85%92%E5%BA%97" target="_blank" rel="noopener">福朋喜來登酒店</a>
+            </td>
+            <td class="note">確認證件、伴手禮、充電器等是否都收好。</td>
+          </tr>
+          <tr class="new">
+            <td class="time">12:45</td>
+            <td>日展租車到飯店接送 → 機場</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%97%A5%E5%B1%95%E7%A7%9F%E8%BB%8A%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">日展租車接駁</a>
+            </td>
+            <td class="note">你提供的安排：12:45 日展到飯店載你們，直接送往機場，免自行叫車。</td>
+          </tr>
+          <tr>
+            <td class="time">13:45</td>
+            <td>起飛返程</td>
+            <td class="place">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E6%A9%9F%E5%A0%B4" target="_blank" rel="noopener">澎湖機場</a>
+            </td>
+            <td class="note">結束 3 天 2 夜悠閒行程。</td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+
   </section>
 
+  <!-- 小吃 / 補充 -->
   <section class="card">
-    <h2>📱 分享</h2>
+    <h2>小吃／補充資訊（可機動穿插）</h2>
+    <div class="sectionTitle">馬公市區推薦點</div>
     <ul class="list">
-      <li>所有 Google Maps 連結點開即可在手機直接導航，無需手動複製地址</li>
+      <li>
+        <a href="https://www.google.com/maps/search/?api=1&query=%E9%90%98%E8%A8%98%E7%87%92%E9%A4%85%20%E6%96%87%E5%BA%B7%E8%A1%97" target="_blank" rel="noopener">
+          鐘記燒餅（文康街）
+        </a>：燒餅油條，早餐人氣店。
+      </li>
+      <li>
+        <a href="https://www.google.com/maps/search/?api=1&query=%E4%BA%8C%E4%BF%A1%E9%A3%AF%E7%B3%B0%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">
+          二信飯糰
+        </a>：飯糰、甜不辣，可買回飯店吃。
+      </li>
+      <li>
+        <a href="https://www.google.com/maps/search/?api=1&query=%E7%8E%89%E5%86%A0%E5%AB%A9%E4%BB%99%E8%8D%89%20%E6%BE%8E%E6%B9%96" target="_blank" rel="noopener">
+          玉冠嫩仙草
+        </a>：下午茶冰品，室內有位子休息。
+      </li>
+      <li>
+        <a href="https://www.google.com/maps/search/?api=1&query=%E6%BE%8E%E6%B9%96%E7%AF%A4%E8%A1%8C%E5%8D%81%E6%9D%91" target="_blank" rel="noopener">
+          篤行十村
+        </a>：文青聚落、紀念館、小店，雨天備案也合適。
+      </li>
+      <li>
+        <a href="https://www.google.com/maps/search/?api=1&query=%E8%92%99%E5%9C%B0%E5%8D%A1%E7%BE%85%E5%92%96%E5%95%A1%E9%A4%A8+%E6%BE%8E%E6%B9%96%E7%B8%A3%E9%A6%AC%E5%85%AC%E5%B8%82%E6%B0%91%E7%94%9F%E8%B7%AF17-4%E8%99%9F" target="_blank" rel="noopener">
+          蒙地卡羅咖啡館
+        </a>：咖啡＋甜點，安排在 Day1 或 Day2 晚上皆可。
+      </li>
     </ul>
   </section>
 
 </main>
 
 <footer>
-  <p><strong>🏝️ 澎湖 3天2夜 自由行行程表</strong> | 製作日期：2026/01/27</p>
+  <p><strong>澎湖 3天2夜 自由行行程表（2026/03/07–03/09）</strong></p>
+  <p>本頁面為手機優先設計，每個地點名稱都已附上 Google Maps 搜尋連結，同行旅客只要點擊即可導航。</p>
+  <p>若需再加入更多餐廳電話（tel: 一鍵撥號）或調整任何時間／景點排序，可以把需求丟給規劃者再產出新版 HTML。</p>
 </footer>
 
 </body>
